@@ -1,4 +1,4 @@
-# React & Tailwind CSS Based Edtech Frontend
+# Edtech Frontend made using ReactJS and TailwindCSS
 
 ## Usage
 
@@ -13,7 +13,7 @@ Steps and guide to start the project on local machine.
 2. Install the required packages.
 
    ```sh
-   cd react-tailwind-css-starter-pack
+   cd "path/to/directory/where/you/clone"
    npm install
    ```
 
