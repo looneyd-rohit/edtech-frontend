@@ -2,6 +2,7 @@
   "name": "edtech-frontend",
   "version": "1.0",
   "private": true,
+  "proxy": "https://edtech-backend-dev.onrender.com/",
   "dependencies": {
     "@ramonak/react-progress-bar": "^5.0.3",
     "@reduxjs/toolkit": "^1.9.5",
