@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaArrowRight } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import HighlightText from '../components/core/HomePage/HighlightText'
@@ -12,7 +12,11 @@ import InstructorSection from '../components/core/HomePage/InstructorSection'
 import Footer from '../components/common/Footer'
 import ExploreMore from '../components/core/HomePage/ExploreMore'
 
+
 const Home = () => {
+    // useEffect(() => {
+    //     document.title = 'Excellence Academia';
+    // }, [])
     return (
         <div>
             {/*Section1  */}
