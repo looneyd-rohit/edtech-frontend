@@ -36,7 +36,7 @@ function Template({ title, description1, description2, image, formType }) {
             />
             <img
               src={image}
-              alt="Students"
+              alt="students"
               width={558}
               height={504}
               loading="lazy"
