@@ -19,7 +19,7 @@ export default function ViewCourse() {
   const [reviewModal, setReviewModal] = useState(false)
 
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       const courseData = await getFullDetailsOfCourse(courseId, token)
       // console.log("Course Data here... ", courseData.courseDetails)
       dispatch(setCourseSectionData(courseData.courseDetails.courseContent))
@@ -27,7 +27,7 @@ export default function ViewCourse() {
       dispatch(setCompletedLectures(courseData.completedVideos))
       let lectures = 0
       courseData?.courseDetails?.courseContent?.forEach((sec) => {
-        lectures += sec.subSection.length
+        lectures += sec.subSection?.length
       })
       dispatch(setTotalNoOfLectures(lectures))
     })()

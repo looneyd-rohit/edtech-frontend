@@ -72,7 +72,7 @@ function ReviewSlider() {
                     </div>
                   </div>
                   <p className="font-medium text-richblack-25">
-                    {review?.review.length > truncateLetters
+                    {review?.review?.length > truncateLetters
                       ? `${review?.review
                         .substring(0, truncateLetters)} ...`
                       : `${review?.review}`}

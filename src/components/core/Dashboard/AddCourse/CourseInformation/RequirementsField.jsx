@@ -17,7 +17,7 @@ export default function RequirementsField({
     if (editCourse) {
       setRequirementsList(course?.instructions)
     }
-    register(name, { required: true, validate: (value) => value.length > 0 })
+    register(name, { required: true, validate: (value) => value?.length > 0 })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -60,7 +60,7 @@ export default function RequirementsField({
           Add
         </button>
       </div>
-      {requirementsList.length > 0 && (
+      {requirementsList?.length > 0 && (
         <ul className="mt-2 list-inside list-disc">
           {requirementsList.map((requirement, index) => (
             <li key={index} className="flex items-center text-richblack-5">

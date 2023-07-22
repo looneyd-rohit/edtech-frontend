@@ -26,7 +26,7 @@ export default function InstructorChart({ courses }) {
     datasets: [
       {
         data: courses.map((course) => course.totalStudentsEnrolled),
-        backgroundColor: generateRandomColors(courses.length),
+        backgroundColor: generateRandomColors(courses?.length),
       },
     ],
   }
@@ -37,7 +37,7 @@ export default function InstructorChart({ courses }) {
     datasets: [
       {
         data: courses.map((course) => course.totalAmountGenerated),
-        backgroundColor: generateRandomColors(courses.length),
+        backgroundColor: generateRandomColors(courses?.length),
       },
     ],
   }
@@ -54,22 +54,20 @@ export default function InstructorChart({ courses }) {
         {/* Button to switch to the "students" chart */}
         <button
           onClick={() => setCurrChart("students")}
-          className={`rounded-sm p-1 px-3 transition-all duration-200 ${
-            currChart === "students"
+          className={`rounded-sm p-1 px-3 transition-all duration-200 ${currChart === "students"
               ? "bg-richblack-700 text-yellow-50"
               : "text-yellow-400"
-          }`}
+            }`}
         >
           Students
         </button>
         {/* Button to switch to the "income" chart */}
         <button
           onClick={() => setCurrChart("income")}
-          className={`rounded-sm p-1 px-3 transition-all duration-200 ${
-            currChart === "income"
+          className={`rounded-sm p-1 px-3 transition-all duration-200 ${currChart === "income"
               ? "bg-richblack-700 text-yellow-50"
               : "text-yellow-400"
-          }`}
+            }`}
         >
           Income
         </button>
