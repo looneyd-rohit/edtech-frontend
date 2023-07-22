@@ -7,7 +7,7 @@ import { Route, Routes, useNavigate } from "react-router-dom"
 
 // Components
 import NavBarComponent from "./components/common/NavBarComponent"
-import OpenRoute from "./components/core/auth/OpenRoute"
+import OpenRouteComponent from "./components/core/auth/OpenRouteComponent"
 import PrivateRoute from "./components/core/auth/PrivateRoute"
 import AddCourse from "./components/core/Dashboard/AddCourse"
 import Cart from "./components/core/Dashboard/Cart"
@@ -61,41 +61,41 @@ function App() {
         <Route
           path="login"
           element={
-            <OpenRoute>
+            <OpenRouteComponent>
               <Login />
-            </OpenRoute>
+            </OpenRouteComponent>
           }
         />
         <Route
           path="forgot-password"
           element={
-            <OpenRoute>
+            <OpenRouteComponent>
               <ForgotPassword />
-            </OpenRoute>
+            </OpenRouteComponent>
           }
         />
         <Route
           path="update-password/:id"
           element={
-            <OpenRoute>
+            <OpenRouteComponent>
               <UpdatePassword />
-            </OpenRoute>
+            </OpenRouteComponent>
           }
         />
         <Route
           path="signup"
           element={
-            <OpenRoute>
+            <OpenRouteComponent>
               <Signup />
-            </OpenRoute>
+            </OpenRouteComponent>
           }
         />
         <Route
           path="verify-email"
           element={
-            <OpenRoute>
+            <OpenRouteComponent>
               <VerifyEmail />
-            </OpenRoute>
+            </OpenRouteComponent>
           }
         />
         {/* Private Route - for Only Logged in User */}
