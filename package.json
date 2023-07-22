@@ -3,6 +3,7 @@
   "description": "This is the client side of the ExcellenceAcademia App",
   "version": "0.1.0",
   "private": true,
+  "author": "Rohit Sadhu",
   "dependencies": {
     "@ramonak/react-progress-bar": "^5.0.3",
     "@reduxjs/toolkit": "^1.9.5",
@@ -36,9 +37,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "cd server && npm run dev",
-    "dev": "concurrently -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
