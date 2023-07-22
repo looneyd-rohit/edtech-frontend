@@ -30,7 +30,7 @@ import ProfileDropdown from "../core/Auth/ProfileDropdown"
 //   },
 // ];
 
-function NavBarComponent() {
+const Navbar = () => {
   const { token } = useSelector((state) => state.auth)
   const { user } = useSelector((state) => state.profile)
   const { totalItems } = useSelector((state) => state.cart)
@@ -165,4 +165,4 @@ function NavBarComponent() {
   )
 }
 
-export default NavBarComponent
+export default Navbar
