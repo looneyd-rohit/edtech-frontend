@@ -3,28 +3,23 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/logo.png";
+import Logo from "../../assets/Logo/logo.jpeg";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
 const Resources = [
-  "Articles",
-  "Blog",
-  "Chart Sheet",
-  "Code challenges",
-  "Docs",
+  "Articles/Blogs",
   "Projects",
   "Videos",
-  "Workspaces",
 ];
 const Plans = ["Paid memberships", "For students", "Business solutions"];
-const Community = ["Forums", "Chapters", "Events"];
+const Community = ["Forums", "Events"];
 
 const Footer = () => {
   return (
-    <div className="bg-richblack-800">
+    <div className="bg-richblack-800 mb-0">
       <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14">
         <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
           {/* Section 1 */}
@@ -35,7 +30,7 @@ const Footer = () => {
                 Company
               </h1>
               <div className="flex flex-col gap-2">
-                {["About", "Careers", "Affiliates"].map((ele, i) => {
+                {["About", "Affiliates"].map((ele, i) => {
                   return (
                     <div
                       key={i}
@@ -84,7 +79,7 @@ const Footer = () => {
             </div>
 
             <div className="w-[48%] lg:w-[30%] mb-7 lg:pl-0">
-              <h1 className="text-richblack-50 font-semibold text-[16px]">
+              {/* <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Plans
               </h1>
 
@@ -101,8 +96,9 @@ const Footer = () => {
                     </div>
                   );
                 })}
-              </div>
-              <h1 className="text-richblack-50 font-semibold text-[16px] mt-7">
+              </div> */}
+
+              <h1 className="text-richblack-50 font-semibold text-[16px]">
                 Community
               </h1>
 
@@ -158,7 +154,7 @@ const Footer = () => {
               return (
                 <div
                   key={i}
-                  className={` ${BottomFooter?.length - 1 === i
+                  className={` ${BottomFooter.length - 1 === i
                     ? ""
                     : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     } px-3 `}
@@ -171,7 +167,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ looneyD-ROHIT © 2023 ExcellenceAcademia</div>
+          <div className="text-center">ExcellenceAcademia &copy; 2023</div>
         </div>
       </div>
     </div>
