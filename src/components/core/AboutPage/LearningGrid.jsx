@@ -6,9 +6,9 @@ const LearningGridArray = [
   {
     order: -1,
     heading: "World-Class Learning for",
-    highlightText: "Anyone, Anywhere",
+    highliteText: "Anyone, Anywhere",
     description:
-      "excellenceacademia partners with more than 275+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.",
+      "ExcellenceAcademia partners with more than 275+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.",
     BtnText: "Learn More",
     BtnLink: "/",
   },
@@ -22,25 +22,25 @@ const LearningGridArray = [
     order: 2,
     heading: "Our Learning Methods",
     description:
-      "excellenceacademia partners with more than 275+ leading universities and companies to bring",
+      "ExcellenceAcademia partners with more than 275+ leading universities and companies to bring",
   },
   {
     order: 3,
     heading: "Certification",
     description:
-      "excellenceacademia partners with more than 275+ leading universities and companies to bring",
+      "ExcellenceAcademia partners with more than 275+ leading universities and companies to bring",
   },
   {
     order: 4,
     heading: `Rating "Auto-grading"`,
     description:
-      "excellenceacademia partners with more than 275+ leading universities and companies to bring",
+      "ExcellenceAcademia partners with more than 275+ leading universities and companies to bring",
   },
   {
     order: 5,
     heading: "Ready to Work",
     description:
-      "excellenceacademia partners with more than 275+ leading universities and companies to bring",
+      "ExcellenceAcademia partners with more than 275+ leading universities and companies to bring",
   },
 ];
 
@@ -62,7 +62,7 @@ const LearningGrid = () => {
               <div className="xl:w-[90%] flex flex-col gap-3 pb-10 xl:pb-0">
                 <div className="text-4xl font-semibold ">
                   {card.heading}
-                  <HighlightText text={card.highlightText} />
+                  <HighlightText text={card.highliteText} />
                 </div>
                 <p className="text-richblack-300 font-medium">
                   {card.description}

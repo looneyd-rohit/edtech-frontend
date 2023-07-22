@@ -1,11 +1,7 @@
-import { useEffect } from "react"
 import loginImg from "../assets/Images/login.webp"
 import Template from "../components/core/Auth/Template"
 
 function Login() {
-  // useEffect(() => {
-  //   document.title = 'Login | Excellence Academia';
-  // }, [])
   return (
     <Template
       title="Welcome Back"

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
 import { updateProfile } from "../../../../services/operations/SettingsAPI"
-import IconBtn from "../../../common/IconBtn"
+import IconBtn from "../../../Common/IconBtn"
 
 const genders = ["Male", "Female", "Non-Binary", "Prefer not to say", "Other"]
 
@@ -22,7 +22,7 @@ export default function EditProfile() {
   const submitProfileForm = async (data) => {
     // console.log("Form Data - ", data)
     try {
-      dispatch(updateProfile(token, data, navigate));
+      dispatch(updateProfile(token, data))
     } catch (error) {
       console.log("ERROR MESSAGE - ", error.message)
     }
@@ -92,7 +92,7 @@ export default function EditProfile() {
                     message: "Please enter your Date of Birth.",
                   },
                   max: {
-                    value: new Date().toISOString().split("T")[0],
+                    value: new Date().toISOString().split("T")?.[0],
                     message: "Date of Birth cannot be in the future.",
                   },
                 })}

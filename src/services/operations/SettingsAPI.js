@@ -1,7 +1,7 @@
 import { toast } from "react-hot-toast"
 
 import { setUser } from "../../slices/profileSlice"
-import { apiConnector } from "../apiconnector"
+import { apiConnector } from "../apiConnector"
 import { settingsEndpoints } from "../apis"
 import { logout } from "./authAPI"
 
@@ -35,9 +35,6 @@ export function updateDisplayPicture(token, formData) {
       }
       toast.success("Display Picture Updated Successfully")
       dispatch(setUser(response.data.data))
-      const oldUser = JSON.parse(localStorage.getItem("user"));
-      const newUser = { ...oldUser, image: response.data.data.image };
-      localStorage.setItem("user", JSON.stringify(newUser));
     } catch (error) {
       console.log("UPDATE_DISPLAY_PICTURE_API API ERROR............", error)
       toast.error("Could Not Update Display Picture")
@@ -46,11 +43,10 @@ export function updateDisplayPicture(token, formData) {
   }
 }
 
-export function updateProfile(token, formData, navigate) {
+export function updateProfile(token, formData) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
     try {
-      console.log(formData);
       const response = await apiConnector("PUT", UPDATE_PROFILE_API, formData, {
         Authorization: `Bearer ${token}`,
       })
@@ -66,9 +62,6 @@ export function updateProfile(token, formData, navigate) {
         setUser({ ...response.data.updatedUserDetails, image: userImage })
       )
       toast.success("Profile Updated Successfully")
-      const newData = { ...response.data.updatedUserDetails, image: userImage };
-      localStorage.setItem("user", JSON.stringify(newData));
-      navigate("/dashboard/my-profile");
     } catch (error) {
       console.log("UPDATE_PROFILE_API API ERROR............", error)
       toast.error("Could Not Update Profile")

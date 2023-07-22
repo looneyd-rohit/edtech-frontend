@@ -1,11 +1,7 @@
-import { useEffect } from "react"
 import signupImg from "../assets/Images/signup.webp"
 import Template from "../components/core/Auth/Template"
 
 function Signup() {
-  // useEffect(() => {
-  //   document.title = 'Sign Up | Excellence Academia';
-  // }, [])
   return (
     <Template
       title="Join the millions learning to code with ExcellenceAcademia for free"

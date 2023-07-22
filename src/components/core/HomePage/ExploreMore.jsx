@@ -12,17 +12,17 @@ const tabsName = [
 ];
 
 const ExploreMore = () => {
-  const [currentTab, setCurrentTab] = useState(tabsName[0]);
-  const [courses, setCourses] = useState(HomePageExplore[0].courses);
+  const [currentTab, setCurrentTab] = useState(tabsName?.[0]);
+  const [courses, setCourses] = useState(HomePageExplore?.[0].courses);
   const [currentCard, setCurrentCard] = useState(
-    HomePageExplore[0].courses[0].heading
+    HomePageExplore?.[0].courses?.[0].heading
   );
 
   const setMyCards = (value) => {
     setCurrentTab(value);
     const result = HomePageExplore.filter((course) => course.tag === value);
-    setCourses(result[0].courses);
-    setCurrentCard(result[0].courses[0].heading);
+    setCourses(result?.[0].courses);
+    setCurrentCard(result?.[0].courses?.[0].heading);
   };
 
   return (
@@ -43,11 +43,10 @@ const ExploreMore = () => {
         {tabsName.map((ele, index) => {
           return (
             <div
-              className={` text-[16px] flex flex-row items-center gap-2 ${
-                currentTab === ele
+              className={` text-[16px] flex flex-row items-center gap-2 ${currentTab === ele
                   ? "bg-richblack-900 text-richblack-5 font-medium"
                   : "text-richblack-200"
-              } px-7 py-[7px] rounded-full transition-all duration-200 cursor-pointer hover:bg-richblack-900 hover:text-richblack-5`}
+                } px-7 py-[7px] rounded-full transition-all duration-200 cursor-pointer hover:bg-richblack-900 hover:text-richblack-5`}
               key={index}
               onClick={() => setMyCards(ele)}
             >
