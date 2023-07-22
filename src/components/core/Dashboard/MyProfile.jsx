@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
 import { formattedDate } from "../../../utils/dateFormatter"
-import IconBtn from "../../Common/IconBtn"
+import IconBtn from "../../common/IconBtn"
 
 export default function MyProfile() {
   const { user } = useSelector((state) => state.profile)
@@ -50,11 +50,10 @@ export default function MyProfile() {
           </IconBtn>
         </div>
         <p
-          className={`${
-            user?.additionalDetails?.about
-              ? "text-richblack-5"
-              : "text-richblack-400"
-          } text-sm font-medium`}
+          className={`${user?.additionalDetails?.about
+            ? "text-richblack-5"
+            : "text-richblack-400"
+            } text-sm font-medium`}
         >
           {user?.additionalDetails?.about ?? "Write Something About Yourself"}
         </p>
