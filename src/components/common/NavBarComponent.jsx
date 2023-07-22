@@ -9,7 +9,7 @@ import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/api-connector"
 import { categories } from "../../services/apis"
 import { ACCOUNT_TYPE } from "../../utils/constants"
-import ProfileDropdown from "../core/Auth/ProfileDropdown"
+import ProfileDropdown from "../core/auth/ProfileDropdown"
 
 // const subLinks = [
 //   {

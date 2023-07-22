@@ -7,8 +7,8 @@ import { Route, Routes, useNavigate } from "react-router-dom"
 
 // Components
 import NavBarComponent from "./components/common/NavBarComponent"
-import OpenRoute from "./components/core/Auth/OpenRoute"
-import PrivateRoute from "./components/core/Auth/PrivateRoute"
+import OpenRoute from "./components/core/auth/OpenRoute"
+import PrivateRoute from "./components/core/auth/PrivateRoute"
 import AddCourse from "./components/core/Dashboard/AddCourse"
 import Cart from "./components/core/Dashboard/Cart"
 import EditCourse from "./components/core/Dashboard/EditCourse"
