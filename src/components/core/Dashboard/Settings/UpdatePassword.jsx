@@ -21,11 +21,11 @@ export default function UpdatePassword() {
   } = useForm()
 
   const submitPasswordForm = async (data) => {
-    // console.log("password Data - ", data)
+    // // console.log("password Data - ", data)
     try {
       await changePassword(token, data)
     } catch (error) {
-      console.log("ERROR MESSAGE - ", error.message)
+      // console.log("ERROR MESSAGE - ", error.message)
     }
   }
 

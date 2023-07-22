@@ -23,13 +23,13 @@ function Catalog() {
     ; (async () => {
       try {
         const res = await apiConnector("GET", categories.CATEGORIES_API)
-        console.log(res);
+        // console.log(res);
         const category_id = res?.data?.data?.filter(
           (ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName
         )?.[0]?._id
         setCategoryId(category_id)
       } catch (error) {
-        console.log("Could not fetch Categories.", error)
+        // console.log("Could not fetch Categories.", error)
       }
     })()
   }, [catalogName])
@@ -40,7 +40,7 @@ function Catalog() {
           const res = await getCatalogPageData(categoryId)
           setCatalogPageData(res)
         } catch (error) {
-          console.log(error)
+          // console.log(error)
         }
       })()
     }
