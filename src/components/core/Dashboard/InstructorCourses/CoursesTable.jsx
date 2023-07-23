@@ -3,7 +3,7 @@ import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
 
 import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FaCheck } from "react-icons/fa"
 import { FiEdit2 } from "react-icons/fi"
 import { HiClock } from "react-icons/hi"
@@ -37,6 +37,7 @@ export default function CoursesTable({ courses, setCourses }) {
     setLoading(false)
   }
 
+  console.log(courses);
   // // console.log("All Course ", courses)
 
   return (
@@ -110,7 +111,7 @@ export default function CoursesTable({ courses, setCourses }) {
                   </div>
                 </Td>
                 <Td className="text-sm font-medium text-richblack-100">
-                  2hr 30min
+                  {course?.totalDuration ? course.totalDuration : "2 hrs"}
                 </Td>
                 <Td className="text-sm font-medium text-richblack-100">
                   ₹{course.price}
