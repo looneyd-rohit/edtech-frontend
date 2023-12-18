@@ -1,3 +1,4 @@
+import React from "react"
 import { FaCheck } from "react-icons/fa"
 import { useSelector } from "react-redux"
 
@@ -27,7 +28,7 @@ export default function RenderSteps() {
     <>
       <div className="relative mb-2 flex w-full justify-center">
         {steps.map((item, index) => (
-          <>
+          <React.Fragment key={index}>
             <div
               className="flex flex-col items-center "
               key={item.id}
@@ -54,27 +55,24 @@ export default function RenderSteps() {
                 ></div>
               </>
             )}
-          </>
+          </React.Fragment>
         ))}
       </div>
 
       <div className="relative mb-16 flex w-full select-none justify-between">
         {steps.map((item, index) => (
-          <>
-            <div
-              className="flex min-w-[130px] flex-col items-center gap-y-2"
-              key={index}
+          <div
+            className="flex min-w-[130px] flex-col items-center gap-y-2"
+            key={index}
+          >
+
+            <p
+              className={`text-sm ${step >= item.id ? "text-richblack-5" : "text-richblack-500"
+                }`}
             >
-
-              <p
-                className={`text-sm ${step >= item.id ? "text-richblack-5" : "text-richblack-500"
-                  }`}
-              >
-                {item.title}
-              </p>
-            </div>
-
-          </>
+              {item.title}
+            </p>
+          </div>
         ))}
       </div>
       {/* Render specific component based on current step */}

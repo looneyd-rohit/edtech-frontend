@@ -86,11 +86,13 @@ export async function BuyCourse(
 
     paymentObject.open()
     paymentObject.on("payment.failed", function (response) {
+      console.log(response)
       toast.error("Oops! Payment Failed.")
       // console.log(response.error)
     })
   } catch (error) {
     // console.log("PAYMENT API ERROR............", error)
+    console.log(error)
     toast.error("Could Not make Payment.")
   }
   toast.dismiss(toastId)
@@ -116,6 +118,7 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
     dispatch(resetCart())
   } catch (error) {
     // console.log("PAYMENT VERIFY ERROR............", error)
+    console.log('verify error: ', error)
     toast.error("Could Not Verify Payment.")
   }
   toast.dismiss(toastId)
@@ -138,6 +141,7 @@ async function sendPaymentSuccessEmail(response, amount, token) {
       }
     )
   } catch (error) {
-    // console.log("PAYMENT SUCCESS EMAIL ERROR............", error)
+    console.log("PAYMENT SUCCESS EMAIL ERROR............", error)
+
   }
 }
